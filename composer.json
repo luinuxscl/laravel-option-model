@@ -1,0 +1,44 @@
+{
+    "name": "luinuxscl/option-package",
+    "description": "Paquete Laravel para gestionar opciones polimórficas asociadas a cualquier modelo.",
+    "keywords": [
+        "laravel",
+        "options",
+        "polimórfico",
+        "configuración"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luis Sepúlveda",
+            "email": "lsepulveda@outlook.com",
+            "homepage": "https://like.cl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "illuminate/support": "^11.0",
+        "illuminate/database": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Luinuxscl\\OptionPackage\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Luinuxscl\\OptionPackage\\Providers\\OptionServiceProvider"
+            ],
+            "aliases": {
+                "Option": "Luinuxscl\\OptionPackage\\Facades\\Option"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^9.12"
+    }
+}
