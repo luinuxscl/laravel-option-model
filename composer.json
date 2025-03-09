@@ -1,11 +1,12 @@
 {
     "name": "luinuxscl/option-package",
     "description": "Paquete Laravel para gestionar opciones polimórficas asociadas a cualquier modelo.",
+    "version": "1.0.0",
     "keywords": [
         "laravel",
         "options",
-        "polimórfico",
-        "configuración"
+        "polimorfico",
+        "configuracion"
     ],
     "license": "MIT",
     "authors": [
@@ -25,6 +26,11 @@
         "psr-4": {
             "Luinuxscl\\OptionPackage\\": "src/"
         }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "check-style": "phpcs -p --standard=PSR12 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src",
+        "fix-style": "phpcbf -p --standard=PSR12 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src"
     },
     "extra": {
         "laravel": {
