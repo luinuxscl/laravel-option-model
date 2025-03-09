@@ -6,16 +6,29 @@ use Illuminate\Support\ServiceProvider;
 
 class OptionServiceProvider extends ServiceProvider
 {
-    public function register()
+    /**
+     * Register services.
+     */
+    public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../../config/option.php', 'option');
+        // Registrar el archivo de configuración
+        $this->mergeConfigFrom(
+            __DIR__ . '/../../config/option.php',
+            'option'
+        );
     }
 
-    public function boot()
+    /**
+     * Bootstrap services.
+     */
+    public function boot(): void
     {
-        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+        // Publicar el archivo de configuración
         $this->publishes([
             __DIR__ . '/../../config/option.php' => config_path('option.php'),
-        ], 'option-config');
+        ], 'config');
+
+        // Cargar migraciones si existen
+        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
     }
 }
