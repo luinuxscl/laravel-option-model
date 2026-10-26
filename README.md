@@ -18,7 +18,7 @@
 1. **Instalar el paquete vía Composer:**
 
    ```bash
-   composer require luinuxscl/option-package
+   composer require luinuxscl/laravel-option-model
    ```
 
 2. **Publicar y ejecutar las migraciones:**
