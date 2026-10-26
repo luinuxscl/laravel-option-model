@@ -46,5 +46,6 @@
     "prefer-stable": true,
     "require-dev": {
         "orchestra/testbench": "^9.12"
-    }
+    },
+    "type": "library"
 }
