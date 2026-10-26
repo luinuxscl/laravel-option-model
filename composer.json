@@ -1,7 +1,6 @@
 {
     "name": "luinuxscl/laravel-option-model",
     "description": "Paquete Laravel para gestionar opciones polimórficas asociadas a cualquier modelo.",
-    "version": "1.0.0",
     "keywords": [
         "laravel",
         "options",
